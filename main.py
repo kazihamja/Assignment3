@@ -14,7 +14,7 @@ class MyGameApp:
         self.win.title("Spot the Difference - Student Team Project")
         self.win.geometry("1100x800")
         
-        self.bg_color = "#e8e8e8"
+        self.bg_color = "#1d46b8"
         self.win.configure(bg=self.bg_color)
         
         self.handler = ImageHandler()
@@ -138,7 +138,7 @@ class MyGameApp:
                 self.refresh_text()
                 self.msg.config(text="Got one! Nice.", fg="green")
                 if len(self.tracker.found) == 5:
-                    messagebox.showinfo("Finished", "All differences found! Good job.")
+                    messagebox.showinfo("Finished", "You have found all differences! Good job.")
                     self.giveup_btn.config(state=tk.DISABLED)
             else:
                 self.refresh_text()
@@ -157,7 +157,7 @@ class MyGameApp:
             if i not in self.tracker.found:
                 self.circle_it(i, "blue")
         self.giveup_btn.config(state=tk.DISABLED)
-        self.msg.config(text="Revealing missed spots...", fg="darkblue")
+        self.msg.config(text="Revealing spots that you have missed...", fg="darkblue")
 
 if __name__ == "__main__":
     root = tk.Tk()
