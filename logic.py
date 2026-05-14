@@ -1,5 +1,5 @@
 # Class to track score and game state
-# Person 4 worked on this file
+
 class GameTracker:
     def __init__(self):
         self.score = 0
