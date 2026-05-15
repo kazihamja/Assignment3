@@ -36,8 +36,8 @@ class ImageHandler:
         while len(self.diff_list) < num and tries < 100:
             tries += 1
             # Random size for the box
-            box_w = random.randint(45, 75)
-            box_h = random.randint(45, 75)
+            box_w = random.randint(40, 70)
+            box_h = random.randint(40, 70)
             # Random spot
             pos_x = random.randint(0, img_w - box_w)
             pos_y = random.randint(0, img_h - box_h)
